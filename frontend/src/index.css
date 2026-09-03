@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+:root {
+  /* IBPS Swiss / International Typographic Style Tokens (SBB Lineage) */
+  --bg-app: #FAFAF8;
+  --bg-inverse: #0A0A0A;
+
+  --ink: #111111;
+  --ink-secondary: #5A5A5A;
+  --ink-muted: #9A9A9A;
+
+  --rule-default: #D9D7D2;
+  --rule-strong: #111111;
+
+  --accent: #D5001C;
+  --accent-tint: #F6D9DC;
+
+  /* Legacy alias mappings for component compatibility */
+  --bg-surface: #FAFAF8;
+  --bg-surface-raised: #F0EFEA;
+  --border-default: #D9D7D2;
+  --border-strong: #111111;
+  --text-primary: #111111;
+  --text-secondary: #5A5A5A;
+  --text-muted: #9A9A9A;
+  --accent-primary: #111111;
+  --status-success: #111111;
+  --status-warning: #D5001C;
+  --status-danger: #D5001C;
+  --status-info: #5A5A5A;
+}
+
+/* Global Zero Radius & Zero Shadow Enforcement */
+*, *::before, *::after {
+  box-sizing: border-box;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+body {
+  background-color: var(--bg-app);
+  color: var(--ink);
+  font-family: 'Helvetica Neue', 'Neue Haas Grotesk', Arial, 'Inter', sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: var(--bg-app); }
+::-webkit-scrollbar-thumb { background: var(--rule-default); }
+::-webkit-scrollbar-thumb:hover { background: var(--ink-secondary); }
+
+/* Table Base Styles — Swiss Grid Anchor */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  text-align: left;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink);
+  padding: 10px 12px;
+  border-bottom: 2px solid var(--rule-strong);
+  white-space: nowrap;
+  background: var(--bg-app);
+}
+
+td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--rule-default);
+  color: var(--ink);
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+tr:hover td {
+  background: #F2F1EC;
+}
+
+/* Tabular Monospace font for data values */
+.mono {
+  font-family: 'IBM Plex Mono', 'JetBrains Mono', 'Fira Code', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Alignment utilities */
+.text-right {
+  text-align: right;
+}
+
+.text-accent {
+  color: var(--accent);
+}
+
+
